@@ -1,0 +1,127 @@
+/* Colores base */
+:root {
+  --color-negro: #000000;
+  --color-blanco: #FFFFFF;
+  --color-dorado: #D4A373;
+  --dorado-claro: #e6c9a3;
+  --dorado-oscuro: #9c6b3d;
+  --color-dorado-claro: #887a28;
+  --degradado-dorado: linear-gradient(
+    90deg,
+    var(--color-dorado),
+    var(--color-dorado-claro),
+    var(--color-dorado)
+  );
+  --color-gris: #CCCCCC;
+  --color-gris-oscuro: #1C1C1C;
+  --color-azul-acento: #80CFFF;
+}
+
+/* Presentación */
+.presentacion {
+  background: var(--color-gris-oscuro);
+  color: var(--color-blanco);
+  border-radius: 15px;
+}
+.presentacion .titulo-seccion {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--color-dorado);
+}
+.presentacion .subtitulo {
+  font-size: 1.1rem;
+  color: var(--color-gris);
+}
+.card-info {
+  background: transparent;
+  border: 2px solid var(--color-dorado);
+  border-radius: 15px;
+  padding: 1.5rem;
+  margin: 10px;
+  transition: transform 0.3s ease;
+}
+.card-info:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 4px 12px rgba(255, 215, 0, 0.3);
+}
+
+/* Novedades */
+.novedades {
+  margin-top: 3rem;
+}
+.novedades .titulo-seccion {
+  text-align: center;
+  color: var(--color-dorado);
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+.card-novedad {
+  border: 2px solid var(--color-dorado);
+  border-radius: 20px;
+  margin-bottom: 2rem;
+  overflow: hidden;
+  background: var(--color-gris-oscuro);
+  transition: transform 0.3s ease;
+}
+.card-novedad:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 16px rgba(212, 163, 115, 0.4);
+}
+.imagen-novedad {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 20px;
+  margin: 15px;
+}
+.contenido-novedad {
+  padding: 1.5rem;
+  color: var(--color-blanco);
+}
+.contenido-novedad h3 {
+  color: var(--color-dorado);
+  font-size: 1.5rem;
+}
+/* Botón Me gusta */
+.btn-like {
+  background: transparent;
+  border: 2px solid var(--color-dorado);
+  color: var(--color-blanco);
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: all 0.3s ease;
+}
+
+.btn-like i {
+  font-size: 1.2rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Hover animado */
+.btn-like:hover {
+  background: var(--degradado-dorado);
+  color: var(--color-negro);
+  border-color: var(--color-dorado);
+}
+
+.btn-like:hover i {
+  color: red;
+  transform: scale(1.2);
+}
+
+/* Estado activo (cuando ya dio click) */
+.btn-like.activo {
+  background: var(--degradado-dorado);
+  color: var(--color-negro);
+  border-color: var(--color-dorado);
+}
+
+.btn-like.activo i {
+  color: red;
+  transform: scale(1.2);
+}

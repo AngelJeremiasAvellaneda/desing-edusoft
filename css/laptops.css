@@ -1,0 +1,106 @@
+:root {
+  --color-negro: #000000;
+  --color-blanco: #ffffff;
+  --color-dorado: #d4a373;
+  --color-dorado-claro: #e6c9a3;
+  --color-dorado-oscuro: #9c6b3d;
+  --color-gris: #cccccc;
+  --color-gris-oscuro: #1c1c1c;
+}
+
+/* CARD */
+.laptop-card {
+  background: rgba(0, 0, 0, 0.4);
+  border: 2px solid var(--color-dorado);
+  border-radius: 12px;
+  overflow: hidden;
+  color: var(--color-blanco);
+  transition: all 0.4s ease;
+  box-shadow: 0 0 10px rgba(212, 163, 115, 0.3);
+  cursor: pointer;
+  position: relative;
+}
+
+/* HEADER: imagen + título (siempre visible) */
+.laptop-card .header-card {
+  text-align: center;
+  padding: 1rem;
+  background: #000;
+  z-index: 2;
+  position: relative;
+  height: 300px;
+}
+
+.laptop-card img {
+  width: 100%;             /* ocupar todo el ancho de la card */
+  height: 200px;           /* altura fija */
+  object-fit: contain;     /* mantiene proporción sin recortar */
+  background-color: #000;  /* opcional: fondo negro para imágenes transparentes */
+  border-radius: 10px;
+  margin-bottom: 0.5rem;
+}
+
+
+.laptop-card h3 {
+  font-size: 1.1rem;
+  color: var(--color-dorado);
+  margin: 0;
+  line-height: 1.4rem;
+  min-height: calc(1.4rem * 2); /* reserva espacio para 2 líneas */
+  text-align: center;
+}
+
+
+
+/* BODY oculto inicialmente (debajo del header) */
+.laptop-card .body-card {
+  background: #111;
+  padding: 0rem 1rem;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 0.6s ease;
+}
+
+/* Hover: aparece el body, desplazando */
+.laptop-card:hover .body-card {
+  max-height: 500px; /* se expande */
+  opacity: 1;
+}
+
+/* Texto */
+.laptop-card .body-card p {
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  color: var(--color-blanco);
+}
+
+.laptop-card .body-card ul {
+  padding: 1rem;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.laptop-card .body-card li {
+  margin-bottom: 0.3rem;
+  color: var(--color-blanco);
+}
+
+/* Botón Comprar */
+.btn-comprar {
+  display: block;
+  margin: 1rem auto 1rem;
+  padding: 1rem 2rem;
+  background: var(--color-dorado);
+  border: none;
+  border-radius: 8px;
+  color: var(--color-negro);
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-comprar:hover {
+  background: var(--color-dorado-claro);
+  box-shadow: 0 0 12px var(--color-dorado);
+}

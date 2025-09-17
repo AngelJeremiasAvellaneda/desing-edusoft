@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechZone</title>
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- CSS-->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/laptops.css">
+    <!-- Iconos -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+  <!-- Header -->
+  <header>    
+      <!-- Personalizaciones: nav-custom ,button-custom, menu-custom, networks-custom-->
+      <nav class="navbar navbar-expand-lg sticky-top" style="z-index:1050;">
+          <div class="container-fluid">
+              <!-- Logo -->
+              <a class="navbar-brand d-flex align-items-center" href="/index.html">
+                    
+                  <strong class="texto-dorado">TechZone</strong>
+              </a>
+              <!-- Botón hamburguesa -->
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+              </button>
+              <!-- Menú -->
+              <div class="collapse navbar-collapse" id="navbarNav">
+                  <ul class="navbar-nav mx-auto px-4 py-2 menu-custom">
+                      <li class="nav-item">
+                          <a class="nav-link" href="/index.html">Inicio</a>
+                      </li>
+                      <!-- Productos -->
+                      <li class="nav-item dropdown d-none d-lg-block "> <!-- Versión desktop -->
+                          <a class="nav-link active" href="#" id="navbarDropdown" role="button"
+                              data-bs-toggle="dropdown" aria-expanded="false">
+                              Productos
+                          </a>
+                          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                              <li><a class="dropdown-item" href="laptops.html">Laptops</a></li>
+                              <li><a class="dropdown-item" href="desktops.html">Desktops</a></li>
+                              <li><a class="dropdown-item" href="accessories.html">Accesorios</a></li>
+                          </ul>
+                      </li>
+                      <!-- Versión móvil / Productos-->
+                      <li class="nav-item d-lg-none w-auto">
+                          <a class="nav-link" href="#submenuProductos" 
+                              data-bs-toggle="collapse" role="button"
+                              aria-expanded="false" aria-controls="submenuProductos">
+                              Productos
+                          </a>
+                          <ul class="collapse list-unstyled ps-3" id="submenuProductos">
+                              <li><a class="nav-link" href="products/laptops.html">Laptops</a></li>
+                              <li><a class="nav-link" href="products/desktops.html">Desktops</a></li>
+                              <li><a class="nav-link" href="products/accessories.html">Accesorios</a></li>
+                          </ul>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="../blog_news.html">Blog/Novedades</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="../contact_support.html">Contacto/Soporte</a>
+                      </li>
+                  </ul>
+
+                  <!-- Redes -->
+                  <div class="d-flex justify-content-center mt-3 mt-lg-0 networks-custom mx-5">
+                      <a href="" class="text-light me-2"><i class='bx bxl-instagram'></i></a>
+                      <a href="" class="text-light me-2"><i class='bx bxl-github'></i></a>
+                      <a href="" class="text-light"><i class='bx bxl-linkedin'></i></a>
+                  </div>
+              </div>
+          </div>
+      </nav>
+  </header>
+  <!-- Main -->
+  <main class="container my-5">
+    <div class="row justify-content-center">
+      <!-- Laptop 1 -->
+      <div class="col-md-4 col-sm-6 col-12 mb-4">
+        <div class="laptop-card">
+          <div class="header-card">
+            <img src="../image/laptops/laptop1.png" alt="Laptop HP Victus">
+            <h3>Laptop HP Victus Gaming 15-fa0007la</h3>
+          </div>
+          <div class="body-card">
+            <ul>
+              <li><strong>Precio:</strong> S/. 3,699</li>
+              <li><strong>Procesador:</strong> Intel® Core™ i7 12ª gen</li>
+              <li><strong>RAM:</strong> 16 GB</li>
+              <li><strong>Almacenamiento:</strong> 512 GB</li>
+              <li><strong>Pantalla:</strong> 15.6″</li>
+            </ul>
+            <button class="btn-comprar">Comprar</button>
+          </div>
+        </div>
+      </div>
+      <!-- Laptop 2 -->
+      <div class="col-md-4 col-sm-6 col-12 mb-4">
+        <div class="laptop-card">
+          <div class="header-card">
+            <img src="../image/laptops/laptop2.png" alt="Laptop Gamer Acer Predator PH18-71-958U">
+            <h3>Laptop Gamer Acer Predator PH18-71-958U</h3>
+          </div>
+          <div class="body-card">
+            <ul>
+              <li><strong>Precio:</strong> S/. 11,999</li>
+              <li><strong>Procesador:</strong> 13.ª generación Intel Core i9</li>
+              <li><strong>RAM:</strong> 32 GB</li>
+              <li><strong>Almacenamiento:</strong> 1 TB disco sólido</li>
+              <li><strong>Pantalla:</strong> LEDS IPS</li>
+            </ul>
+            <button class="btn-comprar">Comprar</button>
+          </div>
+        </div>
+      </div>
+      <!-- Laptop 3 -->
+      <div class="col-md-4 col-sm-6 col-12 mb-4">
+        <div class="laptop-card">
+          <div class="header-card">
+            <img src="../image/laptops/laptop3.png" alt="Laptop Gamer HP Pavilion">
+            <h3>Laptop Gamer HP Pavilion</h3>
+          </div>
+          <div class="body-card">
+            <ul>
+              <li><strong>Precio:</strong> S/. 1,199</li>
+              <li><strong>Procesador:</strong> 10ª generación Intel Core i5</li>
+              <li><strong>RAM:</strong> 8 GB</li>
+              <li><strong>Almacenamiento:</strong> 256 GB Disco duro</li>
+              <li><strong>Pantalla:</strong> 15'6</li>
+            </ul>
+            <button class="btn-comprar">Comprar</button>
+          </div>
+        </div>
+      </div>
+      <!-- Laptop 4 -->
+      <div class="col-md-4 col-sm-6 col-12 mb-4">
+        <div class="laptop-card">
+          <div class="header-card">
+            <img src="../image/laptops/laptop4.png" alt="Laptop Asus TUF Gaming F15 FX507ZC4-HN005W">
+            <h3>Laptop Asus TUF Gaming F15 FX507ZC4-HN005W</h3>
+          </div>
+          <div class="body-card">
+            <ul>
+              <li><strong>Precio:</strong> S/. 3,649</li>
+              <li><strong>Procesador:</strong> 12ª generación Intel Core i5</li>
+              <li><strong>RAM:</strong> 8 GB</li>
+              <li><strong>Almacenamiento:</strong> 512 GB</li>
+              <li><strong>Pantalla:</strong> 15'6</li>
+            </ul>
+            <button class="btn-comprar">Comprar</button>
+          </div>
+        </div>
+      </div>
+      <!-- Laptop 5 -->
+      <div class="col-md-4 col-sm-6 col-12 mb-4">
+        <div class="laptop-card">
+          <div class="header-card">
+            <img src="../image/laptops/laptop5.png" alt="Laptop ASUS Rog Strix G15 G512LV">
+            <h3>Laptop ASUS Rog Strix G15 G512LV</h3>
+          </div>
+          <div class="body-card">
+            <ul>
+              <li><strong>Precio:</strong> S/. 4,949</li>
+              <li><strong>Procesador:</strong> 10ª generación Intel Core i7</li>
+              <li><strong>RAM:</strong> 16 GB</li>
+              <li><strong>Almacenamiento:</strong> 1 TB disco duro</li>
+              <li><strong>Pantalla:</strong> 15'6</li>
+            </ul>
+            <button class="btn-comprar">Comprar</button>
+          </div>
+        </div>
+      </div>
+      <!-- Laptop 6 -->
+      <div class="col-md-4 col-sm-6 col-12 mb-4">
+        <div class="laptop-card">
+          <div class="header-card">
+            <img src="../image/laptops/laptop6.png" alt="Laptop Lenovo LOQ de 15.6, modelo 82XT002PLM GeForce RTX 4050">
+            <h3>Laptop Lenovo LOQ de 15.6", modelo 82XT002PLM GeForce RTX 4050</h3>
+          </div>
+          <div class="body-card">
+            <ul>
+              <li><strong>Precio:</strong> S/. 5,099</li>
+              <li><strong>Procesador:</strong> AMD Ryzen 7 13.ª generación Intel Core i7</li>
+              <li><strong>RAM:</strong> 16 GB</li>
+              <li><strong>Almacenamiento:</strong> 512 GB disco sólido</li>
+              <li><strong>Pantalla:</strong> 15'6 IPS Antirreflejo</li>
+            </ul>
+            <button class="btn-comprar">Comprar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <!-- Footer -->
+  <footer class="pt-5 pb-3" style="background: #121212;">
+    <div class="container">
+      <div class="row">
+        <!-- Logo y descripción -->
+        <div class="col-md-4 mb-4">
+          <h3 class="texto-dorado">TechZone</h3>
+          <p>Tu tienda de tecnología con los mejores productos: Monitores, Laptops, PCs y accesorios.</p>
+        </div>
+        <!-- Enlaces rápidos -->
+        <div class="col-md-4 mb-4">
+          <h5 class="text-light">Enlaces</h5>
+          <ul class="list-unstyled">
+            <li><a href="start.html" class="text-light text-decoration-none">Inicio</a></li>
+            <li><a href="products/laptops.html" class="text-light text-decoration-none">Laptops</a></li>
+            <li><a href="products/desktops.html" class="text-light text-decoration-none">Desktops</a></li>
+            <li><a href="products/accessories.html" class="text-light text-decoration-none">Accesorios</a></li>
+            <li><a href="contact_support.html" class="text-light text-decoration-none">Contacto/Soporte</a></li>
+          </ul>
+        </div>
+        <!-- Redes sociales -->
+        <div class="col-md-4 mb-4">
+          <h5 class="text-light">Síguenos</h5>
+          <div class="d-flex gap-3">
+            <a href="#" class="text-light fs-4"><i class='bx bxl-instagram'></i></a>
+            <a href="#" class="text-light fs-4"><i class='bx bxl-github'></i></a>
+            <a href="#" class="text-light fs-4"><i class='bx bxl-linkedin'></i></a>
+          </div>
+        </div>
+      </div>
+      <hr class="border-secondary">
+      <!-- Derechos de autor -->
+      <div class="text-center text-light">
+        <small>&copy; 2025 TechZone. Todos los derechos reservados.</small>
+      </div>
+    </div>
+  </footer>
+  <!-- Script JS y Bootstrap JS -->
+  <script src="js/app.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

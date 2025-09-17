@@ -1,0 +1,155 @@
+:root {
+  --color-negro: #000000;
+  --color-blanco: #FFFFFF;
+  --color-dorado: #D4A373;
+  --dorado-claro: #e6c9a3;
+  --dorado-oscuro: #9c6b3d;
+  --color-dorado-claro: #887a28;
+  --degradado-dorado: linear-gradient(
+    90deg,
+    var(--color-dorado),
+    var(--color-dorado-claro),
+    var(--color-dorado)
+  );
+  --color-gris: #CCCCCC;
+  --color-gris-oscuro: #1C1C1C;
+  --color-azul-acento: #80CFFF;
+}
+main {
+    background-color: #1a1a1a; /* un negro “bacán” que no sea tan fuerte */
+    min-height: calc(100vh - 80px - 150px); /* 100vh menos header y footer aproximados */
+    padding: 2rem 0; /* espacio arriba y abajo */
+}
+/* ====== BODY ====== */
+body {
+  width: 100%;
+  color: lightgrey;
+  background-color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+/* ====== HEADER ====== */
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  align-items: center;
+  justify-content: space-between;
+  backdrop-filter: blur(8px);
+  background-color: rgba(0,0,0,0.3);
+}
+
+/* ====== LOGO ====== */
+.texto-dorado {
+  font-size: 30px;
+  font-weight: bold;
+  font-family: "Arial", sans-serif;
+  background: linear-gradient(180deg, var(--dorado-claro), var(--dorado-oscuro));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+/* ====== MENÚ ====== */
+.menu-custom .nav-link {
+  color: lightgray;
+  font-weight: 600;
+  margin: 0 8px;
+  text-decoration: none;
+  position: relative; 
+  transition: color 0.3s ease;
+  border-bottom: none; 
+}
+
+.menu-custom .nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--color-dorado);
+  transition: width 0.3s ease;
+}
+
+.menu-custom .nav-link:hover::after,
+.menu-custom .nav-link.active::after {
+  width: 100%;
+}
+
+.menu-custom .nav-link:hover,
+.menu-custom .nav-link.active {
+  color: #fff;
+  font-weight: 700;
+}
+.navbar-toggler {
+  border: none;
+}
+.navbar-toggler-icon {
+  filter: invert(1);
+}
+.navbar .networks-custom a {
+  text-decoration: none;
+  color: lightgray;
+  font-size: 1.3rem;
+  display: flex;
+  transition: transform 0.3s ease, color 0.3s ease;
+  margin: 0 8px;
+}
+.navbar .networks-custom a:hover {
+  transform: scale(1.2);
+}
+/* Para los links normales */
+.menu-custom .nav-link.active,
+.menu-custom .nav-link:focus,
+.menu-custom .nav-link:hover {
+    color: #fff; /* o el color que quieras */
+}
+/* Para dropdowns */
+.menu-custom .nav-item.dropdown > .nav-link.active,
+.menu-custom .nav-item.dropdown > .nav-link:focus,
+.menu-custom .nav-item.dropdown > .nav-link:hover {
+    color: #fff; /* mantiene el link Productos blanco */
+}
+footer a:hover {
+  color: var(--color-dorado);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+footer .texto-dorado {
+  font-size: 28px;
+  background: linear-gradient(180deg, var(--dorado-claro), var(--dorado-oscuro));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+/* ====== RESPONSIVE ====== */
+@media (max-width: 991.98px) {
+  .navbar .menu-custom {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    padding-left: 1rem;
+  }
+  .navbar .menu-custom .nav-link {
+    width: auto;
+    text-align: left;
+    margin: 8px 0;
+    padding: 10px 0;
+  }
+  .navbar .menu-custom ul {
+    text-align: left;
+    padding-left: 1.2rem;
+    width: 100%;
+  }
+  
+}
+
+
+
+
+
