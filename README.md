@@ -1,16 +1,28 @@
+# 🖥️ TechZone  
 
-<a href="https://www.youtube.com/watch?v=qOODrGaAZNU&list=PL67b5wgxuUtAP2ckCBi-ryBaZnRZi2nTj" target="_blank">
-  <img src="./image/Thumbnail.png" alt="Thumbnail"/>
-</a>
+TechZone es una tienda online de tecnología donde podrás encontrar **laptops, desktops y accesorios**, además de un espacio de **blog/novedades** y un área de **contacto/soporte**.  
+El diseño combina un estilo **oscuro y elegante** con detalles en **dorado**, para transmitir modernidad y exclusividad.  
 
+## 📂 Estructura del proyecto  
+- `index.html` → Página principal  
+- `products/` → Sección de productos (Laptops, Desktops, Accesorios)  
+- `blog_news.html` → Blog y novedades  
+- `contact_support.html` → Contacto y soporte  
+- `css/` → Hojas de estilo personalizadas  
+- `js/` → Scripts para interacción (formulario, botones, etc.)  
+- `image/` → Imagenes que contendra el website
 
----
-## Introduction: 
-#### Learn how to create a stunning movie website from scratch using HTML, CSS, and JavaScript! In this beginner-friendly tutorial, we’ll guide you through designing a modern website with amazing features like a smooth reload animation, an interactive navigation bar, and an animated carousel slider. You’ll also discover how to make your website fully responsive with media queries, add dynamic effects with JavaScript, and create beautiful UI/UX designs with CSS3. Whether you're a web development beginner or looking to level up your frontend skills, this tutorial is perfect for you. Start building your movie listing website today!
+## 🚀 Tecnologías utilizadas  
+- **HTML5, CSS3, JavaScript**  
+- **Bootstrap 5** para diseño responsivo  
+- **Boxicons** para iconografía  
 
+## ✨ Características principales  
+- 🎨 Diseño moderno: paleta **oscuro + dorado**  
+- 📱 100% responsivo (desktop, tablet, móvil)  
+- 📰 Blog con tarjetas dinámicas y botones interactivos  
+- 📩 Formulario de soporte con validaciones  
+- 🌍 Integración con Google Maps  
 
----
-## Watch the full tutorial on YouTub
-<a href="https://www.youtube.com/watch?v=qOODrGaAZNU&list=PL67b5wgxuUtAP2ckCBi-ryBaZnRZi2nTj">
-  <img src="./image/youtube-ligo.png" alt="youtube"/>
-</a>
+## 👨‍💻 Autor  
+Desarrollado por **Jeremías Avellaneda Ángel Addair**  
