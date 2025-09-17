@@ -26,3 +26,4 @@ El diseño combina un estilo **oscuro y elegante** con detalles en **dorado**, p
 
 ## 👨‍💻 Autor  
 Desarrollado por **Jeremías Avellaneda Ángel Addair**  
+Desarrollado por **Rivera Retamozo, Kenyi Pool** 
