@@ -25,5 +25,4 @@ El diseño combina un estilo **oscuro y elegante** con detalles en **dorado**, p
 - 🌍 Integración con Google Maps  
 
 ## 👨‍💻 Autor  
-Desarrollado por **Jeremías Avellaneda Ángel Addair**  
-Desarrollado por **Rivera Retamozo, Kenyi Pool** 
+Desarrollado por **Jeremias Avellaneda Angel Addair**

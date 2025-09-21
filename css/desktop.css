@@ -6,14 +6,15 @@
 }
 
 .productos-grid {
-  flex: 1;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 1.5rem;
 }
 
 /* ================= CARD ================= */
-.laptop-card {
+/* Aplica a laptops y desktops */
+.laptop-card,
+.desktop-card {
   background: rgba(0, 0, 0, 0.4);
   border: 2px solid var(--color-dorado);
   border-radius: 12px;
@@ -26,7 +27,8 @@
   flex-direction: column;
 }
 
-.laptop-card .header-card {
+.laptop-card .header-card,
+.desktop-card .header-card {
   text-align: center;
   padding: 1rem;
   background: #000;
@@ -38,7 +40,8 @@
   justify-content: center;
 }
 
-.laptop-card img {
+.laptop-card img,
+.desktop-card img {
   width: 100%;
   height: auto;
   max-height: 200px;
@@ -48,7 +51,8 @@
   margin-bottom: 0.5rem;
 }
 
-.laptop-card h3 {
+.laptop-card h3,
+.desktop-card h3 {
   font-size: 1.1rem;
   margin: 0;
   line-height: 1.4rem;
@@ -56,17 +60,20 @@
   text-align: center;
 }
 
-.laptop-card .header-card h3 a {
+.laptop-card .header-card h3 a,
+.desktop-card .header-card h3 a {
   color: var(--color-dorado);
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
-.laptop-card .header-card h3 a:hover {
+.laptop-card .header-card h3 a:hover,
+.desktop-card .header-card h3 a:hover {
   color: var(--color-dorado-claro);
 }
 
-.laptop-card .body-card {
+.laptop-card .body-card,
+.desktop-card .body-card {
   background: #111;
   padding: 0rem 1rem;
   max-height: 0;
@@ -76,22 +83,28 @@
 }
 
 .laptop-card:hover .body-card,
-.laptop-card.active .body-card {
+.laptop-card.active .body-card,
+.desktop-card:hover .body-card,
+.desktop-card.active .body-card {
   max-height: 500px;
   opacity: 1;
 }
 
 .laptop-card .body-card p,
-.laptop-card .body-card li {
+.laptop-card .body-card li,
+.desktop-card .body-card p,
+.desktop-card .body-card li {
   color: var(--color-blanco);
   font-size: 0.9rem;
 }
 
-.laptop-card .body-card ul {
+.laptop-card .body-card ul,
+.desktop-card .body-card ul {
   padding: 1rem;
   margin: 0;
 }
 
+/* ================= BOTÓN ================= */
 .btn-comprar {
   display: block;
   margin: 1rem auto 1rem;

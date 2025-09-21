@@ -16,19 +16,24 @@
 <body>
   <!-- Header -->
   <header>    
-      <!-- Personalizaciones: nav-custom ,button-custom, menu-custom, networks-custom-->
       <nav class="navbar navbar-expand-lg sticky-top" style="z-index:1050;">
-          <div class="container-fluid">
-              <!-- Logo -->
-              <a class="navbar-brand d-flex align-items-center" href="index.html">
-                    
-                  <strong class="texto-dorado">TechZone</strong>
-              </a>
-              <!-- Botón hamburguesa -->
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-              </button>
+        <div class="container-fluid">
+          <!-- Logo -->
+          <a class="navbar-brand d-flex align-items-center" href="index.html">
+              <strong class="texto-dorado">TechZone</strong>
+          </a>
+          <div class="d-lg-none navbar-mobile-buttons">
+            <!-- Botón carrito -->
+            <button id="btn-cart" class="btn-carrito d-flex align-items-center">
+                <i class='bx bx-cart fs-4'></i>
+                <span id="cart-count" class="position-absolute top-0 translate-middle badge rounded-pill bg-danger">0</span>
+            </button>
+            <!-- Botón hamburguesa -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>        
+          </div>
               <!-- Menú -->
               <div class="collapse navbar-collapse" id="navbarNav">
                   <ul class="navbar-nav mx-auto px-4 py-2 menu-custom">
@@ -72,16 +77,13 @@
                     <a href="" class="text-light me-2"><i class='bx bxl-instagram'></i></a>
                     <a href="" class="text-light me-2"><i class='bx bxl-github'></i></a>
                     <a href="" class="text-light"><i class='bx bxl-linkedin'></i></a>
-
-                    <!-- Botón carrito -->
-                    <a href="cart.html" class="btn-carrito text-light d-flex align-items-center position-relative">
-                        <i class='bx bx-cart fs-4'></i>
-                        <span class="ms-1">Carrito</span>
-                        <span id="cart-count" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                            0
-                        </span>
-                    </a>
                   </div>
+                <!-- Botón carrito desktop -->
+                <button id="btn-cart-desktop" class="btn-carrito position-relative d-none d-lg-flex align-items-center me-5">
+                    <i class='bx bx-cart fs-4 me-1'></i>
+                    <span id="cart-count-desktop" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
+                    <span class="ms-1">Mi Carrito</span>
+                </button>
               </div>
           </div>
       </nav>
