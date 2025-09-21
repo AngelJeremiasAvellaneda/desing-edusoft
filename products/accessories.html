@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechZone</title>
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- CSS-->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/accessories.css">
+    <!-- noUiSlider CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.8.0/nouislider.min.css" rel="stylesheet">
+    <!-- Iconos -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <!-- Header -->
+    <header>    
+        <nav class="navbar navbar-expand-lg sticky-top" style="z-index:1050;">
+            <div class="container-fluid">
+            <!-- Logo -->
+            <a class="navbar-brand d-flex align-items-center" href="../index.html">
+                <strong class="texto-dorado">TechZone</strong>
+            </a>
+            <div class="d-lg-none navbar-mobile-buttons">
+                <!-- Botón carrito -->
+                <button id="btn-cart" class="btn-carrito d-flex align-items-center">
+                    <i class='bx bx-cart fs-4'></i>
+                    <span id="cart-count" class="position-absolute top-0 translate-middle badge rounded-pill bg-danger">0</span>
+                </button>
+                <!-- Botón hamburguesa -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>        
+            </div>
+            <!-- Menú -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto px-4 py-2 menu-custom">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Inicio</a>
+                    </li>
+                    <!-- Productos -->
+                    <li class="nav-item dropdown d-none d-lg-block "> <!-- Versión desktop -->
+                        <a class="nav-link active" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Productos
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="laptops.html">Laptops</a></li>
+                            <li><a class="dropdown-item" href="desktops.html">Desktops</a></li>
+                            <li><a class="dropdown-item" href="accessories.html">Accesorios</a></li>
+                        </ul>
+                    </li>
+                    <!-- Versión móvil / Productos-->
+                    <li class="nav-item d-lg-none w-auto">
+                        <a class="nav-link" href="#submenuProductos" 
+                            data-bs-toggle="collapse" role="button"
+                            aria-expanded="false" aria-controls="submenuProductos">
+                            Productos
+                        </a>
+                        <ul class="collapse list-unstyled ps-3" id="submenuProductos">
+                            <li><a class="nav-link" href="../products/laptops.html">Laptops</a></li>
+                            <li><a class="nav-link" href="../products/desktops.html">Desktops</a></li>
+                            <li><a class="nav-link active" href="../products/accessories.html">Accesorios</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../blog_news.html">Blog/Novedades</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../contact_support.html">Contacto/Soporte</a>
+                    </li>
+                </ul>
+                <!-- Redes -->
+                <div class="d-flex justify-content-center mt-3 mt-lg-0 networks-custom mx-5 align-items-center gap-3">
+                    <a href="" class="text-light me-2"><i class='bx bxl-instagram'></i></a>
+                    <a href="" class="text-light me-2"><i class='bx bxl-github'></i></a>
+                    <a href="" class="text-light"><i class='bx bxl-linkedin'></i></a>
+                </div>
+                <!-- Botón carrito desktop -->
+                <button id="btn-cart-desktop" class="btn-carrito position-relative d-none d-lg-flex align-items-center me-5">
+                    <i class='bx bx-cart fs-4 me-1'></i>
+                    <span id="cart-count-desktop" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
+                    <span class="ms-1">Mi Carrito</span>
+                </button>
+            </div>
+            </div>
+        </nav>
+    </header>
+    <!-- Side Cart -->
+    <div id="side-cart" class="side-cart">
+        <div class="side-cart-header d-flex justify-content-between align-items-center">
+        <h3>Mi Carrito</h3>
+        <button id="close-cart" class="btn-close">&times;</button>
+        </div>
+        <div id="side-cart-items" class="side-cart-items">
+        <p>Tu carrito está vacío</p>
+        </div>
+        <div class="side-cart-footer d-flex flex-column gap-2">
+        <h4>Total: S/. <span id="side-cart-total">0</span></h4>
+        <div class="d-flex gap-2">
+            <button id="clear-cart" class="btn-compra flex-fill">Quitar todos</button>
+            <button id="checkout-btn" class="btn-compra flex-fill">Comprar</button>
+        </div>
+        </div>
+    </div>
+    <!-- Main -->
+    <main class="container mt-5 pt-5">
+        <div class="row">
+            <!-- Filtros accesorios -->
+            <aside class="col-12 mb-3 filtros-accesorios">
+                <h5 class="text-light mb-3">Filtros</h5>
+                <div class="filtros-buttons">
+                    <button class="filtro-btn" data-tipo="all" title="Todos">
+                        <span class="texto-btn">Todos</span>
+                        <i class='bx bx-package'></i>
+                    </button>
+                    <button class="filtro-btn" data-tipo="mouse" title="Mouse">
+                        <span class="texto-btn">Mouse</span>
+                        <i class='bx bx-mouse'></i>
+                    </button>
+                    <button class="filtro-btn" data-tipo="teclado" title="Teclado">
+                        <span class="texto-btn">Teclado</span>
+                        <i class='bx bxs-keyboard'></i>
+                    </button>
+                    <button class="filtro-btn" data-tipo="audifonos" title="Audífonos">
+                        <span class="texto-btn">Audífonos</span>
+                        <i class='bx bx-headphone'></i>
+                    </button>
+                    <button class="filtro-btn" data-tipo="monitor" title="Monitores">
+                        <span class="texto-btn">Monitor</span>
+                        <i class='bx bx-desktop'></i>
+                    </button>
+                </div>
+            </aside>
+            <!-- Productos -->
+            <section class="col-lg-12">
+                <p class="text-light mb-3">Resultados de accesorios:</p>
+                <div class="row" id="productos-container">
+                    <!-- Accesorio 1 -->
+                    <div class="col-md-4 col-sm-6 col-12 mb-4">
+                        <div class="accessory-card" data-id="acc1" data-precio="199" data-tipo="mouse" data-marca="Logitech">
+                            <div class="header-card">
+                                <img src="../image/accessories/mouse1.png" alt="Mouse Logitech">
+                                <h3><a href="product-details.html?id=acc1">Mouse Logitech G502</a></h3>
+                            </div>
+                            <div class="body-card">
+                            <ul>
+                                <li><strong>Precio:</strong> <span class="precio">199</span></li>
+                                <li><strong>Tipo:</strong> Mouse Gaming</li>
+                                <li><strong>Compatibilidad:</strong> PC / Mac</li>
+                                <li><strong>Marca:</strong> Logitech</li>
+                            </ul>
+                            <button class="btn-comprar">Añadir al Carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Accesorio 2 -->
+                    <div class="col-md-4 col-sm-6 col-12 mb-4">
+                        <div class="accessory-card" data-id="acc2" data-precio="299" data-tipo="teclado" data-marca="Razer">
+                            <div class="header-card">
+                            <img src="../image/accessories/teclado1.png" alt="Teclado Razer">
+                            <h3><a href="product-details.html?id=acc2">Teclado Razer BlackWidow</a></h3>
+                            </div>
+                            <div class="body-card">
+                            <ul>
+                                <li><strong>Precio:</strong> <span class="precio">299</span></li>
+                                <li><strong>Tipo:</strong> Mecánico Gaming</li>
+                                <li><strong>Compatibilidad:</strong> PC</li>
+                                <li><strong>Marca:</strong> Razer</li>
+                            </ul>
+                            <button class="btn-comprar">Añadir al Carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Accesorio 3 -->
+                    <div class="col-md-4 col-sm-6 col-12 mb-4">
+                        <div class="accessory-card" data-id="acc3" data-precio="149" data-tipo="audifonos" data-marca="HyperX">
+                            <div class="header-card">
+                            <img src="../image/accessories/audifono1.png" alt="Audífonos HyperX">
+                            <h3><a href="product-details.html?id=acc3">Audífonos HyperX Cloud II</a></h3>
+                            </div>
+                            <div class="body-card">
+                            <ul>
+                                <li><strong>Precio:</strong> <span class="precio">149</span></li>
+                                <li><strong>Tipo:</strong> Audífonos Gaming</li>
+                                <li><strong>Compatibilidad:</strong> PC / Consola</li>
+                                <li><strong>Marca:</strong> HyperX</li>
+                            </ul>
+                            <button class="btn-comprar">Añadir al Carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Accesorio 4 -->
+                    <div class="col-md-4 col-sm-6 col-12 mb-4">
+                        <div class="accessory-card" data-id="acc4" data-precio="699" data-tipo="monitor" data-marca="Samsung">
+                            <div class="header-card">
+                            <img src="../image/accessories/monitor1.png" alt="Monitor Samsung">
+                            <h3><a href="product-details.html?id=acc4">Monitor Samsung 27" Curvo</a></h3>
+                            </div>
+                            <div class="body-card">
+                            <ul>
+                                <li><strong>Precio:</strong> <span class="precio">699</span></li>
+                                <li><strong>Tipo:</strong> Monitor Curvo</li>
+                                <li><strong>Compatibilidad:</strong> PC</li>
+                                <li><strong>Marca:</strong> Samsung</li>
+                            </ul>
+                            <button class="btn-comprar">Añadir al Carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Más accesorios... -->
+                </div>
+            </section>
+        </div>
+    </main>
+    <!-- Footer -->
+    <footer class="footer-modern pt-5 pb-3">
+        <div class="container">
+        <div class="row g-4">
+            <!-- Logo y descripción -->
+            <div class="col-md-4 text-center text-md-start">
+            <h3 class="footer-logo d-flex align-items-center justify-content-center justify-content-md-start">
+                <i class='bx bx-cpu'></i> TechZone
+            </h3>
+            <p class="footer-desc">
+                Tu tienda de tecnología con los mejores productos: Laptops, PCs y accesorios.
+            </p>
+            </div>
+            <!-- Enlaces rápidos -->
+            <div class="col-md-4">
+            <h5 class="footer-title text-light">Enlaces Rápidos</h5>
+            <ul class="list-unstyled footer-links">
+                <li><a href="../index.html">Inicio</a></li>
+                <li>
+                <span class="footer-subtitle">Productos</span>
+                <ul class="list-unstyled ms-3">
+                    <li><a href="laptops.html">Laptops</a></li>
+                    <li><a href="desktops.html">Desktops</a></li>
+                    <li><a href="accessories.html">Accesorios</a></li>
+                </ul>
+                </li>
+                <li><a href="../blog_news.html">Blog/Novedades</a></li>
+                <li><a href="../contact_support.html">Contacto/Soporte</a></li>
+            </ul>
+            </div>
+            <!-- Redes sociales -->
+            <div class="col-md-4 text-center text-md-start">
+            <h5 class="footer-title text-light">Síguenos</h5>
+            <div class="d-flex gap-3 justify-content-center justify-content-md-start">
+                <a href="#" class="social-link"><i class='bx bxl-instagram'></i></a>
+                <a href="#" class="social-link"><i class='bx bxl-github'></i></a>
+                <a href="#" class="social-link"><i class='bx bxl-linkedin'></i></a>
+            </div>
+            </div>
+        </div>
+        <hr class="border-secondary my-4">
+        <!-- Derechos de autor -->
+        <div class="text-center text-light">
+            <small>&copy; 2025 TechZone. Todos los derechos reservados.</small>
+        </div>
+        </div>
+    </footer>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- noUiSlider JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.8.0/nouislider.min.js"></script>
+    <!-- Tu lógica -->
+    <script src="../js/cart.js"></script>
+    <script src="../js/filters_accessories.js"></script>
+
+</body>
+</html>

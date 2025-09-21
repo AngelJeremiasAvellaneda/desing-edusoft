@@ -109,216 +109,226 @@
     </div>
     <!-- Main -->
     <main class="container-fluid mt-5 pt-5">
-        <div class="row">
+        <div class="row">   
             <!-- Botón toggle filtros -->
             <button id="btn-toggle-filtros" class="btn btn-dark btn-filtros-toggle d-lg-none">
             <i class='bx bx-filter-alt fs-3'></i>
             </button>
-        <!-- Panel de filtros (desktop y móvil) -->
-        <aside class="bg-dark p-3 filtros-lateral">
-        <h5 class="text-light mb-2">Filtros</h5>
-        <small class="text-light mb-3 d-block">
-            Usa estos filtros para ajustar tu búsqueda por características y precio.
-        </small>
-            <!-- Procesador -->
-            <label class="text-light" for="filtro-procesador">Procesador</label>
-            <select id="filtro-procesador" class="form-select mb-3">
-            <option value="">Todos</option>
-            <option value="Intel">Intel</option>
-            <option value="Ryzen">Ryzen</option>
-            </select>
+            <!-- Panel de filtros (desktop y móvil) -->
+            <aside class="bg-dark p-3 filtros-lateral">
+            <h5 class="text-light mb-2">Filtros</h5>
+            <small class="text-light mb-3 d-block">
+                Usa estos filtros para ajustar tu búsqueda por características y precio.
+            </small>
+                <!-- Procesador -->
+                <label class="text-light" for="filtro-procesador">Procesador</label>
+                <select id="filtro-procesador" class="form-select mb-3">
+                <option value="">Todos</option>
+                <option value="Intel">Intel</option>
+                <option value="Ryzen">Ryzen</option>
+                </select>
 
-            <!-- RAM -->
-            <label class="text-light" for="filtro-ram">RAM</label>
-            <select id="filtro-ram" class="form-select mb-3">
-            <option value="">Cualquier RAM</option>
-            <option value="8">8 GB</option>
-            <option value="16">16 GB</option>
-            <option value="32">32 GB</option>
-            </select>
+                <!-- RAM -->
+                <label class="text-light" for="filtro-ram">RAM</label>
+                <select id="filtro-ram" class="form-select mb-3">
+                <option value="">Cualquier RAM</option>
+                <option value="8">8 GB</option>
+                <option value="16">16 GB</option>
+                <option value="32">32 GB</option>
+                </select>
 
-            <!-- Almacenamiento -->
-            <label class="text-light" for="filtro-almacenamiento">Almacenamiento</label>
-            <select id="filtro-almacenamiento" class="form-select mb-3">
-            <option value="">Cualquier almacenamiento</option>
-            <option value="256">256 GB</option>
-            <option value="512">512 GB</option>
-            <option value="1000">1 TB</option>
-            </select>
+                <!-- Almacenamiento -->
+                <label class="text-light" for="filtro-almacenamiento">Almacenamiento</label>
+                <select id="filtro-almacenamiento" class="form-select mb-3">
+                <option value="">Cualquier almacenamiento</option>
+                <option value="256">256 GB</option>
+                <option value="512">512 GB</option>
+                <option value="1000">1 TB</option>
+                </select>
 
-            <!-- Pantalla -->
-            <label class="text-light" for="filtro-pantalla">Pantalla</label>
-            <select id="filtro-pantalla" class="form-select mb-3">
-            <option value="">Cualquier tamaño</option>
-            <option value="15.6">15.6"</option>
-            <option value="17">17"</option>
-            </select>
+                <!-- Pantalla -->
+                <label class="text-light" for="filtro-pantalla">Pantalla</label>
+                <select id="filtro-pantalla" class="form-select mb-3">
+                <option value="">Cualquier tamaño</option>
+                <option value="15.6">15.6"</option>
+                <option value="17">17"</option>
+                </select>
 
-            <!-- Precio rango (desktop) -->
-            <label class="text-light" for="precio-slider">Precio (S/.)</label>
-            <div id="precio-slider"></div>
-            <div class="d-flex justify-content-between text-light mb-2">
-            <span id="precio-min-label">0</span>
-            <span id="precio-max-label">15000</span>
-            </div>
-            
+                <!-- Precio rango (desktop) -->
+                <label class="text-light" for="precio-slider">Precio (S/.)</label>
+                <div id="precio-slider"></div>
+                <div class="d-flex justify-content-between text-light mb-2">
+                <span id="precio-min-label">0</span>
+                <span id="precio-max-label">15000</span>
+                </div>
+                
 
-            <button id="btn-filtrar" class="btn-comprar w-100 mb-2">Aplicar filtros</button>
-            <button id="btn-limpiar" class="btn btn-secondary w-100 mb-3">Limpiar filtros</button>
-        </aside>
-        <!-- Productos -->
-        <section class="col-lg-9">
-        <p class="text-light mb-3">Resultados de desktops:</p>
-        <div class="row" id="productos-container">
-            <!-- Desktop 1 -->
-            <div class="col-md-4 col-sm-6 col-12 mb-4">
-                <div class="desktop-card" data-id="desktop1" data-precio="3200" data-procesador="Ryzen" data-ram="8" data-almacenamiento="256" data-pantalla="22">
-                    <div class="header-card">
-                    <img src="../image/desktops/desktop1.png" alt="Desktop Ryzen Básica">
-                    <h3><a href="product-details.html?id=desktop1">PC Ryzen Básica</a></h3>
+                <button id="btn-filtrar" class="btn-comprar w-100 mb-2">Aplicar filtros</button>
+                <button id="btn-limpiar" class="btn btn-secondary w-100 mb-3">Limpiar filtros</button>
+            </aside>
+            <!-- Productos -->
+            <section class="col-lg-9">
+                <p class="text-light mb-3">Resultados de desktops:</p>
+                <div class="row" id="productos-container">
+                    <!-- Desktop 1 -->
+                    <div class="col-md-4 col-sm-6 col-12 mb-4">
+                        <div class="desktop-card" data-id="desktop1" data-precio="3200" data-procesador="Ryzen" data-ram="8" data-almacenamiento="256" data-pantalla="22">
+                            <div class="header-card">
+                            <img src="../image/desktops/desktop1.png" alt="Desktop Ryzen Básica">
+                            <h3><a href="product-details.html?id=desktop1">PC Ryzen Básica</a></h3>
+                            </div>
+                            <div class="body-card">
+                            <ul>
+                                <li><strong>Precio:</strong> <span class="precio">3200</span></li>
+                                <li><strong>Procesador:</strong> AMD Ryzen 5</li>
+                                <li><strong>RAM:</strong> 8 GB</li>
+                                <li><strong>Almacenamiento:</strong> 256 GB SSD</li>
+                                <li><strong>Pantalla:</strong> 22″</li>
+                            </ul>
+                            <button class="btn-comprar">Añadir al Carrito</button>
+                            </div>
+                        </div>
                     </div>
-                    <div class="body-card">
-                    <ul>
-                        <li><strong>Precio:</strong> <span class="precio">3200</span></li>
-                        <li><strong>Procesador:</strong> AMD Ryzen 5</li>
-                        <li><strong>RAM:</strong> 8 GB</li>
-                        <li><strong>Almacenamiento:</strong> 256 GB SSD</li>
-                        <li><strong>Pantalla:</strong> 22″</li>
-                    </ul>
-                    <button class="btn-comprar">Añadir al Carrito</button>
+                    <!-- Desktop 2 -->
+                    <div class="col-md-4 col-sm-6 col-12 mb-4">
+                        <div class="desktop-card" data-id="desktop2" data-precio="4500" data-procesador="Intel" data-ram="16" data-almacenamiento="512" data-pantalla="24">
+                            <div class="header-card">
+                            <img src="../image/desktops/desktop2.png" alt="PC Intel Gamer">
+                            <h3><a href="product-details.html?id=desktop2">PC Intel Gamer</a></h3>
+                            </div>
+                            <div class="body-card">
+                            <ul>
+                                <li><strong>Precio:</strong> <span class="precio">4500</span></li>
+                                <li><strong>Procesador:</strong> Intel Core i7</li>
+                                <li><strong>RAM:</strong> 16 GB</li>
+                                <li><strong>Almacenamiento:</strong> 512 GB SSD</li>
+                                <li><strong>Pantalla:</strong> 24″</li>
+                            </ul>
+                            <button class="btn-comprar">Añadir al Carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Desktop 3 -->
+                    <div class="col-md-4 col-sm-6 col-12 mb-4">
+                        <div class="desktop-card" data-id="desktop3" data-precio="2800" data-procesador="Intel" data-ram="8" data-almacenamiento="256" data-pantalla="21.5">
+                            <div class="header-card">
+                            <img src="../image/desktops/desktop3.png" alt="PC Intel Básica">
+                            <h3><a href="product-details.html?id=desktop3">PC Intel Básica</a></h3>
+                            </div>
+                            <div class="body-card">
+                            <ul>
+                                <li><strong>Precio:</strong> <span class="precio">2800</span></li>
+                                <li><strong>Procesador:</strong> Intel Core i5</li>
+                                <li><strong>RAM:</strong> 8 GB</li>
+                                <li><strong>Almacenamiento:</strong> 256 GB SSD</li>
+                                <li><strong>Pantalla:</strong> 21.5″</li>
+                            </ul>
+                            <button class="btn-comprar">Añadir al Carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Desktop 4 -->
+                    <div class="col-md-4 col-sm-6 col-12 mb-4">
+                        <div class="desktop-card" data-id="desktop4" data-precio="6000" data-procesador="Ryzen" data-ram="32" data-almacenamiento="1000" data-pantalla="27">
+                            <div class="header-card">
+                            <img src="../image/desktops/desktop4.png" alt="PC Ryzen Avanzada">
+                            <h3><a href="product-details.html?id=desktop4">PC Ryzen Avanzada</a></h3>
+                            </div>
+                            <div class="body-card">
+                            <ul>
+                                <li><strong>Precio:</strong> <span class="precio">6000</span></li>
+                                <li><strong>Procesador:</strong> AMD Ryzen 9</li>
+                                <li><strong>RAM:</strong> 32 GB</li>
+                                <li><strong>Almacenamiento:</strong> 1 TB SSD</li>
+                                <li><strong>Pantalla:</strong> 27″</li>
+                            </ul>
+                            <button class="btn-comprar">Añadir al Carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Desktop 5 -->
+                    <div class="col-md-4 col-sm-6 col-12 mb-4">
+                        <div class="desktop-card" data-id="desktop5" data-precio="5200" data-procesador="Intel" data-ram="16" data-almacenamiento="1000" data-pantalla="24">
+                            <div class="header-card">
+                            <img src="../image/desktops/desktop5.png" alt="PC Intel Avanzada">
+                            <h3><a href="product-details.html?id=desktop5">PC Intel Avanzada</a></h3>
+                            </div>
+                            <div class="body-card">
+                            <ul>
+                                <li><strong>Precio:</strong> <span class="precio">5200</span></li>
+                                <li><strong>Procesador:</strong> Intel Core i7</li>
+                                <li><strong>RAM:</strong> 16 GB</li>
+                                <li><strong>Almacenamiento:</strong> 1 TB HDD + 512 GB SSD</li>
+                                <li><strong>Pantalla:</strong> 24″</li>
+                            </ul>
+                            <button class="btn-comprar">Añadir al Carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Desktop 6 -->
+                    <div class="col-md-4 col-sm-6 col-12 mb-4">
+                        <div class="desktop-card" data-id="desktop6" data-precio="7500" data-procesador="Ryzen" data-ram="32" data-almacenamiento="2000" data-pantalla="32">
+                            <div class="header-card">
+                            <img src="../image/desktops/desktop6.png" alt="PC Ryzen Pro">
+                            <h3><a href="product-details.html?id=desktop6">PC Ryzen Pro</a></h3>
+                            </div>
+                            <div class="body-card">
+                            <ul>
+                                <li><strong>Precio:</strong> <span class="precio">7500</span></li>
+                                <li><strong>Procesador:</strong> AMD Ryzen 9</li>
+                                <li><strong>RAM:</strong> 32 GB</li>
+                                <li><strong>Almacenamiento:</strong> 2 TB SSD</li>
+                                <li><strong>Pantalla:</strong> 32″</li>
+                            </ul>
+                            <button class="btn-comprar">Añadir al Carrito</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-
-            <!-- Desktop 2 -->
-            <div class="col-md-4 col-sm-6 col-12 mb-4">
-                <div class="desktop-card" data-id="desktop2" data-precio="4500" data-procesador="Intel" data-ram="16" data-almacenamiento="512" data-pantalla="24">
-                    <div class="header-card">
-                    <img src="../images/desktops/desktop2.png" alt="PC Intel Gamer">
-                    <h3><a href="product-details.html?id=desktop2">PC Intel Gamer</a></h3>
-                    </div>
-                    <div class="body-card">
-                    <ul>
-                        <li><strong>Precio:</strong> <span class="precio">4500</span></li>
-                        <li><strong>Procesador:</strong> Intel Core i7</li>
-                        <li><strong>RAM:</strong> 16 GB</li>
-                        <li><strong>Almacenamiento:</strong> 512 GB SSD</li>
-                        <li><strong>Pantalla:</strong> 24″</li>
-                    </ul>
-                    <button class="btn-comprar">Añadir al Carrito</button>
-                    </div>
-                </div>
-            </div>
-            <!-- Desktop 3 -->
-            <div class="col-md-4 col-sm-6 col-12 mb-4">
-            <div class="desktop-card" data-id="desktop3" data-precio="2800" data-procesador="Intel" data-ram="8" data-almacenamiento="256" data-pantalla="21.5">
-                <div class="header-card">
-                <img src="../images/desktops/desktop3.png" alt="PC Intel Básica">
-                <h3><a href="product-details.html?id=desktop3">PC Intel Básica</a></h3>
-                </div>
-                <div class="body-card">
-                <ul>
-                    <li><strong>Precio:</strong> <span class="precio">2800</span></li>
-                    <li><strong>Procesador:</strong> Intel Core i5</li>
-                    <li><strong>RAM:</strong> 8 GB</li>
-                    <li><strong>Almacenamiento:</strong> 256 GB SSD</li>
-                    <li><strong>Pantalla:</strong> 21.5″</li>
-                </ul>
-                <button class="btn-comprar">Añadir al Carrito</button>
-                </div>
-            </div>
-            </div>
-            <!-- Desktop 4 -->
-            <div class="col-md-4 col-sm-6 col-12 mb-4">
-            <div class="desktop-card" data-id="desktop4" data-precio="6000" data-procesador="Ryzen" data-ram="32" data-almacenamiento="1000" data-pantalla="27">
-                <div class="header-card">
-                <img src="../images/desktops/desktop4.png" alt="PC Ryzen Avanzada">
-                <h3><a href="product-details.html?id=desktop4">PC Ryzen Avanzada</a></h3>
-                </div>
-                <div class="body-card">
-                <ul>
-                    <li><strong>Precio:</strong> <span class="precio">6000</span></li>
-                    <li><strong>Procesador:</strong> AMD Ryzen 9</li>
-                    <li><strong>RAM:</strong> 32 GB</li>
-                    <li><strong>Almacenamiento:</strong> 1 TB SSD</li>
-                    <li><strong>Pantalla:</strong> 27″</li>
-                </ul>
-                <button class="btn-comprar">Añadir al Carrito</button>
-                </div>
-            </div>
-            </div>
-            <!-- Desktop 5 -->
-            <div class="col-md-4 col-sm-6 col-12 mb-4">
-            <div class="desktop-card" data-id="desktop5" data-precio="5200" data-procesador="Intel" data-ram="16" data-almacenamiento="1000" data-pantalla="24">
-                <div class="header-card">
-                <img src="../images/desktops/desktop5.png" alt="PC Intel Avanzada">
-                <h3><a href="product-details.html?id=desktop5">PC Intel Avanzada</a></h3>
-                </div>
-                <div class="body-card">
-                <ul>
-                    <li><strong>Precio:</strong> <span class="precio">5200</span></li>
-                    <li><strong>Procesador:</strong> Intel Core i7</li>
-                    <li><strong>RAM:</strong> 16 GB</li>
-                    <li><strong>Almacenamiento:</strong> 1 TB HDD + 512 GB SSD</li>
-                    <li><strong>Pantalla:</strong> 24″</li>
-                </ul>
-                <button class="btn-comprar">Añadir al Carrito</button>
-                </div>
-            </div>
-            </div>
-            <!-- Desktop 6 -->
-            <div class="col-md-4 col-sm-6 col-12 mb-4">
-            <div class="desktop-card" data-id="desktop6" data-precio="7500" data-procesador="Ryzen" data-ram="32" data-almacenamiento="2000" data-pantalla="32">
-                <div class="header-card">
-                <img src="../images/desktops/desktop6.png" alt="PC Ryzen Pro">
-                <h3><a href="product-details.html?id=desktop6">PC Ryzen Pro</a></h3>
-                </div>
-                <div class="body-card">
-                <ul>
-                    <li><strong>Precio:</strong> <span class="precio">7500</span></li>
-                    <li><strong>Procesador:</strong> AMD Ryzen 9</li>
-                    <li><strong>RAM:</strong> 32 GB</li>
-                    <li><strong>Almacenamiento:</strong> 2 TB SSD</li>
-                    <li><strong>Pantalla:</strong> 32″</li>
-                </ul>
-                <button class="btn-comprar">Añadir al Carrito</button>
-                </div>
-            </div>
-            </div>
+            </section>
         </div>
-        </section>
     </main>
     <!-- Footer -->
-    <footer class="pt-5 pb-3" style="background: #121212;">
+    <footer class="footer-modern pt-5 pb-3">
         <div class="container">
-        <div class="row">
-            <!-- Logo y descripción -->
-            <div class="col-md-4 mb-4">
-            <h3 class="texto-dorado">TechZone</h3>
-            <p>Tu tienda de tecnología con los mejores productos: Monitores, Laptops, PCs y accesorios.</p>
+            <div class="row g-4">
+                <!-- Logo y descripción -->
+                <div class="col-md-4 text-center text-md-start">
+                <h3 class="footer-logo d-flex align-items-center justify-content-center justify-content-md-start">
+                    <i class='bx bx-cpu'></i> TechZone
+                </h3>
+                <p class="footer-desc">
+                    Tu tienda de tecnología con los mejores productos: Laptops, PCs y accesorios.
+                </p>
+                </div>
+                <!-- Enlaces rápidos -->
+                <div class="col-md-4">
+                    <h5 class="footer-title text-light">Enlaces Rápidos</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="../index.html">Inicio</a></li>
+                        <li>
+                        <span class="footer-subtitle">Productos</span>
+                        <ul class="list-unstyled ms-3">
+                            <li><a href="laptops.html">Laptops</a></li>
+                            <li><a href="desktops.html">Desktops</a></li>
+                            <li><a href="accessories.html">Accesorios</a></li>
+                        </ul>
+                        </li>
+                        <li><a href="../blog_news.html">Blog/Novedades</a></li>
+                        <li><a href="../contact_support.html">Contacto/Soporte</a></li>
+                    </ul>
+                </div>
+                <!-- Redes sociales -->
+                <div class="col-md-4 text-center text-md-start">
+                <h5 class="footer-title text-light">Síguenos</h5>
+                <div class="d-flex gap-3 justify-content-center justify-content-md-start">
+                    <a href="#" class="social-link"><i class='bx bxl-instagram'></i></a>
+                    <a href="#" class="social-link"><i class='bx bxl-github'></i></a>
+                    <a href="#" class="social-link"><i class='bx bxl-linkedin'></i></a>
+                </div>
+                </div>
             </div>
-            <!-- Enlaces rápidos -->
-            <div class="col-md-4 mb-4">
-            <h5 class="text-light">Enlaces</h5>
-            <ul class="list-unstyled">
-                <li><a href="start.html" class="text-light text-decoration-none">Inicio</a></li>
-                <li><a href="products/laptops.html" class="text-light text-decoration-none">Laptops</a></li>
-                <li><a href="products/desktops.html" class="text-light text-decoration-none">Desktops</a></li>
-                <li><a href="products/accessories.html" class="text-light text-decoration-none">Accesorios</a></li>
-                <li><a href="contact_support.html" class="text-light text-decoration-none">Contacto/Soporte</a></li>
-            </ul>
-            </div>
-            <!-- Redes sociales -->
-            <div class="col-md-4 mb-4">
-            <h5 class="text-light">Síguenos</h5>
-            <div class="d-flex gap-3">
-                <a href="#" class="text-light fs-4"><i class='bx bxl-instagram'></i></a>
-                <a href="#" class="text-light fs-4"><i class='bx bxl-github'></i></a>
-                <a href="#" class="text-light fs-4"><i class='bx bxl-linkedin'></i></a>
-            </div>
-            </div>
-        </div>
-        <hr class="border-secondary">
+        <hr class="border-secondary my-4">
         <!-- Derechos de autor -->
         <div class="text-center text-light">
             <small>&copy; 2025 TechZone. Todos los derechos reservados.</small>

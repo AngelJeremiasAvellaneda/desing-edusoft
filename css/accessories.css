@@ -1,0 +1,188 @@
+/* ================= LAYOUT ================= */
+.main-container {
+  display: flex;
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
+.productos-grid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+/* ================= CARD ================= */
+.accessory-card {
+  background: rgba(0, 0, 0, 0.4);
+  border: 2px solid var(--color-dorado);
+  border-radius: 12px;
+  overflow: hidden;
+  color: var(--color-blanco);
+  transition: all 0.4s ease;
+  box-shadow: 0 0 10px rgba(212, 163, 115, 0.3);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+}
+
+.accessory-card .header-card {
+  text-align: center;
+  padding: 1rem;
+  background: #000;
+  z-index: 2;
+  position: relative;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.accessory-card img {
+  width: 100%;
+  height: auto;
+  max-height: 200px;
+  object-fit: contain;
+  background-color: #000;
+  border-radius: 10px;
+  margin-bottom: 0.5rem;
+}
+
+.accessory-card h3 {
+  font-size: 1.1rem;
+  margin: 0;
+  line-height: 1.4rem;
+  min-height: calc(1.4rem * 2);
+  text-align: center;
+}
+
+.accessory-card .header-card h3 a {
+  color: var(--color-dorado);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.accessory-card .header-card h3 a:hover {
+  color: var(--color-dorado-claro);
+}
+
+.accessory-card .body-card {
+  background: #111;
+  padding: 0rem 1rem;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.6s ease, opacity 0.6s ease;
+}
+
+/* Aquí está la magia para abrir/cerrar al hover o con la clase active */
+.accessory-card:hover .body-card,
+.accessory-card.active .body-card {
+  max-height: 500px;
+  opacity: 1;
+}
+
+.accessory-card .body-card p,
+.accessory-card .body-card li {
+  color: var(--color-blanco);
+  font-size: 0.9rem;
+}
+
+.accessory-card .body-card ul {
+  padding: 1rem;
+  margin: 0;
+}
+
+.btn-comprar {
+  display: block;
+  margin: 1rem auto 1rem;
+  padding: 1rem 2rem;
+  background: var(--color-dorado);
+  border: none;
+  border-radius: 8px;
+  color: var(--color-negro);
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-comprar:hover {
+  background: var(--color-dorado-claro);
+  box-shadow: 0 0 12px var(--color-dorado);
+}
+/* ================= FILTROS BOTONES ================= */
+.filtros-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center; /* Centrado desktop */
+}
+
+.filtro-btn {
+  background: var(--color-negro);
+  border: 2px solid var(--color-dorado);
+  color: var(--color-dorado);
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.filtro-btn i {
+  font-size: 1.2rem;
+}
+
+.filtro-btn:hover,
+.filtro-btn.active {
+  background: var(--color-dorado);
+  color: var(--color-negro);
+  box-shadow: 0 0 10px var(--color-dorado);
+}
+
+/* Texto dentro de los botones */
+.texto-btn {
+  display: inline; /* Se oculta en mobile más abajo */
+}
+
+/* ================= RESPONSIVE ICONS MOVIL ================= */
+@media (max-width: 992px) {
+  .filtros-buttons {
+    flex-direction: column;
+    position: fixed;
+    top: 50%;
+    right: 1rem; /* para que quede a la derecha */
+    transform: translateY(-50%);
+    gap: 1rem;
+    z-index: 1050;
+  }
+
+  .filtro-btn {
+    width: 50px;
+    height: 50px;
+    padding: 0;
+    font-size: 0;
+    border-radius: 50%;
+    justify-content: center;
+    background: var(--color-negro);
+    border: 2px solid var(--color-dorado);
+    color: var(--color-blanco);
+  }
+
+  .filtro-btn i {
+    font-size: 24px;
+  }
+
+  .filtro-btn:hover,
+  .filtro-btn.active {
+    background: var(--color-dorado);
+    color: var(--color-negro);
+  }
+
+  /* Ocultar texto en mobile */
+  .texto-btn {
+    display: none;
+  }
+}

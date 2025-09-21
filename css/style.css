@@ -116,17 +116,72 @@ header {
   color: #fff;
 }
 /* ====== FOOTER ====== */
-footer a:hover {
+.footer-modern {
+  background-color: #121212;
+  color: #fff;
+  font-family: 'Arial', sans-serif;
+}
+
+.footer-modern a {
   color: var(--color-dorado);
   text-decoration: none;
   transition: color 0.3s ease;
 }
-footer .texto-dorado {
-  font-size: 28px;
-  background: linear-gradient(180deg, var(--dorado-claro), var(--dorado-oscuro));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+
+.footer-modern a:hover {
+  color: var(--dorado-claro);
+}
+
+.footer-logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--color-dorado);
+}
+
+.footer-desc {
+  font-size: 0.95rem;
+  color: #ccc;
+  margin-top: 0.5rem;
+}
+
+.footer-title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: var(--color-dorado);
+  margin-bottom: 1rem;
+}
+
+.footer-links li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-links li ul li {
+  margin-bottom: 0.3rem;
+}
+
+.footer-subtitle {
+  color: var(--color-dorado);
+}
+
+.social-link {
+  font-size: 1.5rem;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.social-link:hover {
+  color: var(--color-dorado);
+  transform: scale(1.2);
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+  .footer-modern .text-md-start {
+    text-align: center !important;
+  }
+  .footer-links ul.ms-3 {
+    margin-left: 1rem !important;
+  }
 }
 /* ====== RESPONSIVE NAV ====== */
 @media (max-width: 992px) {
